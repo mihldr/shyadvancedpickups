@@ -56,7 +56,7 @@ const exportedFunctions = {
     AddPickup: (data) => {
         let node = ELEMENT_PICKUP_TEMPLATE.cloneNode(true)
         node.querySelector(".itemImg").src = data.imgUrl
-        node.querySelector(".itemLabel").innerHTML = data.label.replace("[", "x").replace("]", "")
+        node.querySelector(".itemLabel").innerHTML = data.label
         node.querySelector(".pickItemText").innerHTML = pickItemText
 
         if(animation.enable) {
