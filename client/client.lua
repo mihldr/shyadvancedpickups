@@ -45,7 +45,7 @@ ShyAdvancedPickups.StartThreads = function()
         while true do
             local playerCoords = GetEntityCoords(playerPed)
             local camCoords, camRot = GetFinalRenderedCamCoord(), GetFinalRenderedCamRot(2) * (math.pi / 180)
-            local camRotDir =  vector3(
+            local camRotDir = vector3(
                 -math.sin(camRot.z) * math.cos(camRot.x),
                 math.cos(camRot.z) * math.cos(camRot.x),
                 math.sin(camRot.x)
@@ -54,9 +54,9 @@ ShyAdvancedPickups.StartThreads = function()
             SendNUIMessage({
                 action = "OnGameTick",
                 data = {
-                    camPos = {x = camCoords.x, y = camCoords.y, z = camCoords.z},
-                    camDirVector = {x = camRotDir.x, y = camRotDir.y, z = camRotDir.z},
-                    playerPos = {x = playerCoords.x, y = playerCoords.y, z = playerCoords.z + 1}
+                    camPos = camCoords,
+                    camDirVector = camRotDir,
+                    playerPos = playerCoords + vector3(0,0,1)
                 }
             })
 
