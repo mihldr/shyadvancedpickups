@@ -30,6 +30,9 @@ const exportedFunctions = {
 
         wrapper = new ThreeWrapper(document.querySelector(".container"), data.fov, 0.01, 50000)
         wrapper.startRender()
+
+        if(window.invokeNative)
+            fetch(`https://${GetParentResourceName()}/ready`, {method: 'POST'}).then(() => {})
     }, 
 
     UpdateCamMeta: (data) => {

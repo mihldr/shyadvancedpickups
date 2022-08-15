@@ -87,13 +87,21 @@ ShyAdvancedPickups.StartThreads = function()
     end)
 end
 
+ShyAdvancedPickups.OnThreeReady = function(_, cb) 
+    ShyAdvancedPickups.StartThreads()
+
+    cb("ok")
+end
+
+-- [[ NUI Handlers ]]
+RegisterNUICallback('ready', ShyAdvancedPickups.OnThreeReady)
+
 -- [[ Event Handlers ]]
 RegisterNetEvent("esx:createPickup", ShyAdvancedPickups.AddPickup)
 RegisterNetEvent("esx:removePickup", ShyAdvancedPickups.RemovePickup)
 
 -- [[ Start Script ]]
 ShyAdvancedPickups.Initialize()
-ShyAdvancedPickups.StartThreads()
 
 -- [[ Debug ]]
 RegisterCommand("testpickup", function()
