@@ -1,4 +1,3 @@
-initialized = false
 playerPed = GetPlayerPed(-1)
 
 
