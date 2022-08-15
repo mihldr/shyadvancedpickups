@@ -1,8 +1,10 @@
 import { Vector3, MathUtils } from "three";
 import { ThreeWrapper } from "./ThreeWrapper.js";
 
+// Elements
 const ELEMENT_PICKUP_TEMPLATE = document.querySelector(".template#pickups").firstElementChild
 
+// Global variables
 let wrapper                 = undefined
 let currentPlayerPos        = new Vector3(0, 0, 0)
 let maxDistance             = 3.0
@@ -86,7 +88,7 @@ const exportedFunctions = {
                 }, 10)
             }
             
-            // Make object look at player Position
+            // Make object look at player position only when object is being rendered
             if(isVisible)
                 x.lookAt(currentPlayerPos)
         }
