@@ -41,8 +41,10 @@ const exportedFunctions = {
 
         wrapper.updateCam(data.fov, data.near, data.far)
 
-        if(hidePickupsWhileAiming)
-            wrapper.renderer.domElement.style.display = data.isAiming ? 'none' : 'block'
+        if(data.isInPauseMenu || (hidePickupsWhileAiming && data.isAiming))
+            wrapper.renderer.domElement.style.display = 'none'
+        else 
+            wrapper.renderer.domElement.style.display = 'block'
     },
 
     OnGameTick: (data) => {

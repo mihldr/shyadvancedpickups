@@ -76,7 +76,8 @@ ShyAdvancedPickups.StartThreads = function()
                     fov             = GetFinalRenderedCamFov(),
                     near            = GetFinalRenderedCamNearClip(),
                     far             = GetFinalRenderedCamFarClip(),
-                    isAiming        = IsPlayerFreeAiming(PlayerId())
+                    isAiming        = IsPlayerFreeAiming(PlayerId()),
+                    isInPauseMenu   = IsPauseMenuActive()
                 }
             })
 
