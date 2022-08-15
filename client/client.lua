@@ -90,6 +90,14 @@ end
 ShyAdvancedPickups.OnThreeReady = function(_, cb) 
     ShyAdvancedPickups.StartThreads()
 
+    TriggerEvent("esx:getAllPickups", function(pickups) 
+        for pickupId, pickup in pairs(pickups) do
+            local vec3Pos = vector3(pickup.coords.x, pickup.coords.y, pickup.coords.z)
+
+            ShyAdvancedPickups.AddPickup(pickupId, pickup.label, vec3Pos, nil, pickup.name, nil, nil)
+        end
+    end)
+
     cb("ok")
 end
 
