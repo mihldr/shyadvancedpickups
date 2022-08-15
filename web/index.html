@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Advanced Pickups</title>
+
+        <link href="./css/main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container" style="width: 100%; height: 100%;">
+        
+        </div>
+
+        <div class="template" id="pickups" style="position: absolute; top: 0; left: 0;">
+            <div class="pickup">
+                <div class="animationWrapper">
+                    <div class="pickupContainer">
+                        <img class="itemImg" src="">
+                        <div class="pickUpLabelContainer">
+                            <span class="itemLabel"></span>
+                            <span class="pickItemText"></span>
+                        </div>
+                    </div>
+                    <div class="pickupArrow"></div>
+                </div>
+            </div>
+        </div>
+
+		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "./vendor/three.module.js"
+				}
+			}
+        </script>
+        <script src="./script/main.js" type="module"></script>
+    </body>
+</html>
