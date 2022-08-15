@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://i.imgur.com/lr6Ug50.png"/>
+</p>
+
 ## Introduction
 ShyAdvancedPickups is a script that adds a visual tooltip above dropped items in an
 ESX based FiveM server. This is implemented by using a WebGL based 3D Engine (Three.js) and synchronizing the Three.js worldspace aswell as the main camera to GTA. Using the CSS3DRenderer any html, here the tooltips, can be shown in the CEF layer above the game layer.
