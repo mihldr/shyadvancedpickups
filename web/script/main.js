@@ -28,7 +28,7 @@ const exportedFunctions = {
         animation = data.animation
         hidePickupsWhileAiming = data.hidePickupsWhileAiming
 
-        wrapper = new ThreeWrapper(document.querySelector(".container"), data.fov, 0.01, 50000)
+        wrapper = new ThreeWrapper(document.querySelector(".container"), data.fov, data.near, data.far)
         wrapper.startRender()
 
         if(window.invokeNative)
