@@ -111,18 +111,3 @@ RegisterNetEvent("esx:removePickup", ShyAdvancedPickups.RemovePickup)
 
 -- [[ Start Script ]]
 ShyAdvancedPickups.Initialize()
-
--- [[ Debug ]]
-RegisterCommand("testpickup", function()
-    ShyAdvancedPickups.AddPickup("Test", "Test", GetEntityCoords(GetPlayerPed(-1)))
-end)
-
-RegisterCommand("debug_spampickups", function()
-    CreateThread(function() 
-        while true do 
-            ShyAdvancedPickups.AddPickup(math.random(1, 9999999), "Brot", GetEntityCoords(GetPlayerPed(-1)), nil, "bread")
-
-            Wait(500)
-        end
-    end)
-end)
