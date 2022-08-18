@@ -3,16 +3,14 @@
 </p>
 
 ## Introduction
-ShyAdvancedPickups is a script that adds a visual tooltip above dropped items in an
-ESX based FiveM server. This is implemented by using a WebGL based 3D Engine (Three.js) and synchronizing the Three.js worldspace aswell as the main camera to GTA. Using the CSS3DRenderer any html, here the tooltips, can be shown in the CEF layer above the game layer.
+ShyAdvancedPickups is a script that adds a visual tooltip above dropped items in an ESX based FiveM server. This is accomplished by using a dedicated 3D JavaScript Engine called Three.js and synchronizing the Three.js worldspace and camera to GTA5. Using the Three.js CSS3DRenderer any html, here the tooltips, can be shown in the CEF/UI layer.
 
 ## Example
 To be created
 
 ## Installation
-In order to use this scrips there's a few modifications required which are listed below  
+In order to use this script there's a few small modifications required which are listed below  
   
-
 - ```lua 
   -- ShyAdvancedPickups needs to be able to pull all existing pickups,
   -- so that pickups that were created before the player joined can 
@@ -55,3 +53,4 @@ In order to use this scrips there's a few modifications required which are liste
 		z = pickup.coords.z + 0.25
 	}, label, 1.2, 1)]]--
   ```
+
