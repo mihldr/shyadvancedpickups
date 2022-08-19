@@ -69,7 +69,7 @@ const exportedFunctions = {
             node.querySelector(".animationWrapper").style['animation-duration'] = `${animation.duration}s`
         }
 
-        let x = wrapper.addElement(node, data.id, helpers.convertAxisToThreeAxis(data.pos), new Vector3(0, 0, 0))
+        let x = wrapper.addElement(node, data.id, helpers.convertAxisToThreeAxis(data.pos), new Vector3(0, 0, 0), 0.0045)
         x.inOpacityTimeout = false
 
         x.onUpdate = () => {

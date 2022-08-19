@@ -45,11 +45,11 @@ class ThreeWrapper {
         return this.camera.position
     }
 
-    addElement( element, id, pos, rot ) {    
+    addElement( element, id, pos, rot, scale ) {    
         let object = new CSS3DObject( element );
 
         object.position.copy(pos)
-        object.scale.setScalar(0.0045)
+        object.scale.setScalar(scale)
         object.fivemId = id
 
         this.scene.add( object );
