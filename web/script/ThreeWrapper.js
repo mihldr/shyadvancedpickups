@@ -6,8 +6,6 @@ import { CSS3DRenderer, CSS3DObject } from '../vendor/CSS3DRenderer.js';
 
 class ThreeWrapper {
     constructor(container, fov, nearClipping, farClipping) {
-        this.onTickHandlers = []
-
         this.clock = new THREE.Clock(true)
 
         this.container = container
@@ -78,13 +76,7 @@ class ThreeWrapper {
         }
         updateChilds(this.scene);
         
-
-
         this.renderer.render(this.scene, this.camera)
-    }
-
-    addOnTickHandler(fn) {
-        this.onTickHandlers.push(fn)
     }
 
     updateCam(fov, near, far) {
