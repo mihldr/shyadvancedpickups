@@ -16,8 +16,8 @@ const helpers = {
     convertAxisToThreeAxis: (vector) => {
         if(window.invokeNative)
             return new Vector3(vector.x * 1, vector.z * 1, vector.y * -1); // GTA Axis: +X+Z-Y
-        else
-            return new Vector3(vector.x, vector.y, vector.z) // THREE Axis: +X+Y+Z
+
+        return new Vector3(vector.x, vector.y, vector.z) // THREE Axis: +X+Y+Z
     }
 }
 
