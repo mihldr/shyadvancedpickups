@@ -73,7 +73,7 @@ const exportedFunctions = {
         x.inOpacityTimeout = false
 
         x.onUpdate = () => {
-            let isVisible = new Vector3().copy(x.position).sub(currentPlayerPos).length() < maxDistance
+            let isVisible = new Vector3().subVectors(x.position, currentPlayerPos).length() < maxDistance
 
             if(!isVisible && x.visible && !x.inOpacityTimeout) {
                 x.inOpacityTimeout = true
