@@ -14,7 +14,7 @@ class ThreeWrapper {
 
         // Setup Camera and set position initially to 0, 0, 0
         this.camera = new THREE.PerspectiveCamera(fov, container.offsetWidth / container.offsetHeight, nearClipping, farClipping)
-        this.camera.position.set( -300, 200, 200 );
+        this.camera.position.set( 0, 0, 0 );
 
         // Setup Scene
         this.scene = new THREE.Scene()
