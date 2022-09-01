@@ -35,7 +35,7 @@ class ThreeWrapper {
         this.camera.position.copy(vec3Pos)
     }
 
-    setCamLookAtRelative(vec3Norm) {
+    setCamLookAt(vec3Norm) {
         this.camera.lookAt(new THREE.Vector3().copy(this.camera.position).add(vec3Norm))
     }
 

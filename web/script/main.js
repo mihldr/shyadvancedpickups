@@ -53,7 +53,7 @@ const exportedFunctions = {
 
         // Set Camera Position
         wrapper.setCameraPos(helpers.convertAxisToThreeAxis(data.camPos))
-        wrapper.setCamLookAtRelative(helpers.convertAxisToThreeAxis(data.camDirVector))
+        wrapper.setCamLookAt(helpers.convertAxisToThreeAxis(data.camDirVector))
 
         currentPlayerPos = helpers.convertAxisToThreeAxis(data.playerPos)
     },
